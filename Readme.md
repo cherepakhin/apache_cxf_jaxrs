@@ -1,4 +1,8 @@
-# Демонстрация Apache CXF
+# Демонстрация Apache CXF (REST-API JAX-RS)
+
+Apache CXF — это открытый фреймворк для разработки и развёртывания веб-сервисов и REST-API на Java. Он помогает создавать сервисы, используя стандартные API, такие как JAX-WS (для SOAP) и JAX-RS (для REST).
+
+Здесь демонстрируется использование Apache CXF для создания JAX-RS (для REST-API).
 
 ### Тестирование
 
@@ -33,3 +37,8 @@ Transfer-Encoding: chunked
 "name": "Aquaman"
 }
 ````
+
+
+### Ссылки
+
+* [Apache CXF Samples](https://github.com/apache/cxf/blob/main/distribution/src/main/release/samples)
