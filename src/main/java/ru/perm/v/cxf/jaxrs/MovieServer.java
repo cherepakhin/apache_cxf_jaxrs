@@ -17,7 +17,11 @@ public class MovieServer {
         JAXRSServerFactoryBean factory = new JAXRSServerFactoryBean();
         factory.setResourceClasses(MovieService.class);
         factory.setResourceProvider(MovieService.class, new SingletonResourceProvider(new MovieService()));
-        factory.setAddress("http://localhost:5000/");
+        // for access from localhost only
+        // factory.setAddress("http://localhost:5000/");
+
+        // for access from any host
+        factory.setAddress("http://0.0.0.0:5000/");
 
         Map<Object, Object> extensionMappings = new HashMap<Object, Object>();
 //        extensionMappings.put("xml", MediaType.APPLICATION_XML);

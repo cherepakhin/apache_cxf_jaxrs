@@ -18,6 +18,8 @@ mvn clean package
 /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar target/jaxrs-1.0.0.jar
 ````
 
+<b>>Сервис доступен в течение 50 секунд.</b>
+
 #### Проверка:
 
 ````shell
@@ -37,7 +39,17 @@ Transfer-Encoding: chunked
 "name": "Aquaman"
 }
 ````
+### Настройка доступа из сети
 
+Делается в классе [MovieServer.java](src/main/java/ru/perm/v/cxf/jaxrs/MovieServer.java). 
+
+````java
+// for access from localhost only
+// factory.setAddress("http://localhost:5000/");
+
+// for access from any host
+factory.setAddress("http://0.0.0.0:5000/");
+````
 
 ### Ссылки
 
